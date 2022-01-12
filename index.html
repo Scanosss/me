@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+  
+  <title>Nayot Puttasimma</title>  
+
+<link href="./main.3da94fde.css" rel="stylesheet"></head>
+
+<body>
+
+ <!-- Add your content of header -->
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+      <nav class="navbar-fullscreen" id="navbar-middle">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="navbar-fullscreen-links">
+          <li><a href="./index.html" title="">Home</a></li>
+          <li><a href="./project.html" title="">Activities</a></li>
+          <li><a href="./about.html" title="">About me</a></li>
+        </ul>
+      </nav> 
+    
+    </div>
+  </nav>
+</header>
+
+<!-- style="background-image:url('./assets/images/img-home.jpg')" -->
+<div class="hero-full-container background-image-container white-text-container" 
+     style="background-image:url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"
+     >
+  <div class="overlay-gradient"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-7 col-md-offset-1">
+        <div class="hero-full-wrapper">
+          <div class="text-content">
+            <h1 style="font-size: 50px; font-family: 'Itim', cursive;">Nayot Puttasimma</h1>
+            <p id="typedtext" style="font-size: 30px; margin-top: 40px;">Hello my name is nut. Nice to meet you :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navbarFixedTopAnimation();
+    closeMenuBeforeGoingToPage();
+  });
+</script>\
+<script>
+  var aText = new Array(
+    "Hi there..",
+    "Welcome to my website. :)",
+    "I'm so glad that you're here again.",
+    "So, What do you think about my first personal website?",
+    "I want it to look kind of simple. ",
+    "Cause simple is the best."
+    );
+    var iSpeed = 70; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+     
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+     
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+     
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+
+    typewriter();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navbarToggleSidebar();
+      closeMenuBeforeGoingToPage();
+      navActivePage();
+    });
+</script>
+ <script type="text/javascript" src="./main.4c6e144e.js"></script></body>
+
+</html>
